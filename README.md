@@ -3,12 +3,12 @@
 ### 基础
 - 1.Go基础 阅读 https://tour.go-zh.org/list  
     - 自行学习参加答辩
-- 2. Go Mod && 单元测试
-- 3.http标准库学习 [01]
+- 2. Go Mod && 单元测试 [s01]
+- 3.http标准库学习 [s02]
     - 考核 TODO LIST
     - 考核 学习http client使用 编写http client 库
     - 考核 将上次编写TODO LIST 修改为分布式版本
-- 3.1 goquery学习 [02]
+- 3.1 goquery学习 [s03]
     - 考核 爬虫 
 - 3.并发编程 SCP并发模型, 协程
     - 考核 并发爬虫
