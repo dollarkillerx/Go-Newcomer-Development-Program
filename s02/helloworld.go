@@ -15,7 +15,7 @@ func main() {
 
 	// 启动服务器
 	if err := http.ListenAndServe("0.0.0.0:8081", nil); err != nil {
-		log.Fatalln(err)  // log.Fatalln 发生painc
+		log.Fatalln(err) // log.Fatalln 发生painc
 	}
 }
 
