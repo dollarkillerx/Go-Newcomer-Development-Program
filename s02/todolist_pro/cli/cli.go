@@ -1,7 +1,9 @@
 package cli
 
 import (
+	"github.com/dollarkillerx/Go-Newcomer-Development-Program/s02/todolist_pro/conf"
 	"github.com/dollarkillerx/Go-Newcomer-Development-Program/s02/todolist_pro/storage"
+	"strings"
 
 	"fmt"
 	"log"
@@ -12,10 +14,15 @@ type Cli struct {
 }
 
 func New() *Cli {
-	simple := storage.NewSimple()
+	var db storage.TodoListStorage
+	if strings.Index(conf.Config.Storage, "MySQL") != -1 {
+		db = storage.NewMySQLAccount()
+	} else {
+		db = storage.NewSimple()
+	}
 
 	return &Cli{
-		db: simple,
+		db: db,
 	}
 }
 
